@@ -16,7 +16,6 @@
 package com.example.androiddevchallenge
 
 import android.os.Bundle
-import android.util.Log
 import androidx.activity.compose.setContent
 import androidx.appcompat.app.AppCompatActivity
 import androidx.compose.foundation.Image
@@ -110,7 +109,8 @@ fun ListScreen(navController: NavController) {
     Scaffold(
         backgroundColor = MaterialTheme.colors.background,
         topBar = { ListScreenTopLayout() },
-        bottomBar = { ListScreenBottomLayout() }) {
+        bottomBar = { ListScreenBottomLayout() }
+    ) {
 
         ListScreenContent(dogs = dogList, navController = navController)
     }
@@ -877,5 +877,4 @@ val dogList: List<Dog> = listOf(
         R.drawable.owner2,
         "Ad Soyad"
     ),
-
-    )
+)
